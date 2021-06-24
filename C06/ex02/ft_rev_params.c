@@ -4,9 +4,11 @@ void	ft_putstr(char *str);
 
 int	main(int argc, char **argv)
 {
-	(void)argc;
-	ft_putstr(argv[0]);
-	write (1, "\n", 1);
+	while (--argc > 0)
+	{
+		ft_putstr(argv[argc]);
+		write(1, "\n", 1);
+	}
 	return (0);
 }
 
