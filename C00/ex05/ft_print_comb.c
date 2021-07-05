@@ -15,7 +15,11 @@ void	ft_print_comb(void)
 		while (b <= '9')
 		{
 			c = '2';
-			ft_print_full_number(a, b, c);
+			while (c <= '9')
+			{
+				ft_print_full_number(a, b, c);
+				c++;
+			}
 			b++;
 		}
 		a++;
@@ -24,18 +28,14 @@ void	ft_print_comb(void)
 
 void	ft_print_full_number(char x, char y, char z)
 {
-	while (z <= '9')
+	if (y > x && z > y)
 	{
-		if (y > x && z > y)
+		write(1, &x, 1);
+		write(1, &y, 1);
+		write(1, &z, 1);
+		if (x != '7')
 		{
-			write(1, &x, 1);
-			write(1, &y, 1);
-			write(1, &z, 1);
-			if (x != '7')
-			{
-				write(1, ", ", 2);
-			}
+			write(1, ", ", 2);
 		}
-		z++;
 	}
 }

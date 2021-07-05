@@ -14,7 +14,7 @@ void	ft_print_comb2(void)
 		write(1, ", ", 2);
 		comb = count0 / 10 + '0';
 		write(1, &comb, 1);
-		comb = count0 % 10 + '0';
+		comb =  count0 % 10 + '0';
 		write(1, &comb, 1);
 		write(1, " ", 1);
 		comb = count1 / 10 + '0';
@@ -25,10 +25,4 @@ void	ft_print_comb2(void)
 		if (count1 == 100)
 			count1 = ++count0 + 1;
 	}
-}
-
-int	main(void)
-{
-	ft_print_comb2();
-	return (0);
 }
